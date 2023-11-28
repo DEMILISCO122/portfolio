@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="portfolio, front end developer, examples, websiites">
+    <meta name="description" content="This is a website about Demilade">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e617717eb6.js" crossorigin="anonymous"></script>
+    <title>my portfolio</title>
+    <link rel="icon" href="/portfolio/img/149.png">
+</head>
+
+<body>
+    <div class="preloader">
+    <div class="custom-loader"></div>
+    </div>
+    <!-- -------------home----------------- -->
+    <div id="header">
+        <div class="container">
+            <nav>
+               <img src="/portfolio/img/148.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header" class="nav-heading" onclick="closemenu()">HOME</a></li>
+                <li><a href="#about" class="nav-heading" onclick="closemenu()">ABOUT</a></li>
+                <li><a href="#service" class="nav-heading" onclick="closemenu()">PORTFOLIO</a></li>
+                <li><a href="#portfolio" class="nav-heading" onclick="closemenu()">SEVICES</a></li>
+                <li><a href="#contact" class="nav-heading" onclick="closemenu()">CONTACT</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>PROGRAMMER</p>
+            <h1>Hi, I'm <span>Demilade</span><br>Soetan from Nigeria</h1>
+        </div>
+        </div>
+    </div>
+   c
+<!-- ---------------services start here------------ -->
+<div id="service">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>web development</h2>
+                <p>Creating software application for devices and computer.
+                </p>
+                <a href="#">Learn more</a>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2>web<br>design</h2>
+                <p>creating visual appealing and functional website.
+                </p>
+                <a href="#">Learn more</a>
+            </div>
+
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>App development</h2>
+                <p>creating interactive electronic games involving design,programming,art & sound.
+                </p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ---------------------porfolio------------- -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="/portfolio/img/app desid.png">
+                <div class="layer">
+                    <h3>App Development</h3>
+                    <p>Creating software application for devices and computer.
+                    </p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <div class="work">
+                <img src="/portfolio/img/kelly.png ">
+                <div class="layer">
+                    <h3>Game Development</h3>
+                    <p>creating interactive electronic games involving design,programming,art & sound.
+                    </p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <div class="work">
+                <img src="/portfolio/img/dan.png" >
+                <div class="layer">
+                    <h3>Web Design</h3>
+                    <p> creating visual appealing and functional website.
+                    </p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+
+<!-- ----------------contact------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i> demilisco127@gmail.com</p>
+                <p><i class="fa-solid fa-phone fa-shake"></i> 08038190053</p>
+                <div class="social-icons">
+                    <a href="https://github.com/demilisco122.git"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://wa.me/+2348038190053"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="name" placeholder="Your name" required>
+                    <input type="email" name="email" placeholder="your email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2" id="notifyBtn">Submit</button>
+                    <div class="notification" id="notification" aria-required="true">
+                        <p>Hello! This is a pop up notification.</p>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        copyright © 2023 Demilisco.Made with <i class="fa-solid fa-heart fa-beat"></i> and <i class="fa-solid fa-face-smile fa-beat-fade"></i> sincerity
+    </div>
+</div>
+
+
+
+
+
+<script>
+    let notify = document.getElementById('notifyBtn')
+
+    notify.addEventListener('click', function(e){
+        e.preventDefault
+    });
+
+</script>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+</script>
+
+
+<script>
+    window.addEventListener('load', function () {
+        const preloader = document.querySelector('.preloader');
+        preloader.style.display = 'none';
+    });
+</script>
+
+
+<script>
+    document.getElementById('notifyBtn').addEventListener('click', function() {
+        var notification = document.getElementById('notification');
+        notification.classList.add('show');
+        setTimeout(function() {
+            notification.classList.remove('show');
+        }, 2000);
+    });
+</script>
+
+</body>
+</html>
