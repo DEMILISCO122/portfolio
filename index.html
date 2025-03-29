@@ -124,7 +124,17 @@
                     </div>
                 </div>
             </div>
-            <a href="#" class="btn">See more</a>
+<!-- Sparkle Button -->
+<div class="sp">
+    <button class="sparkle-button">
+      <span class="spark"></span>
+      <span class="backdrop"></span>
+      <svg class="sparkle" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14.187 8.096L15 5.25L15.813 8.096C16.0231 8.83114 16.4171 9.50062 16.9577 10.0413C17.4984 10.5819 18.1679 10.9759 18.903 11.186L21.75 12L18.904 12.813C18.1689 13.0231 17.4994 13.4171 16.9587 13.9577C16.4181 14.4984 16.0241 15.1679 15.814 15.903L15 18.75L14.187 15.904C13.9769 15.1689 13.5829 14.4994 13.0423 13.9587C12.5016 13.4181 11.8321 13.0241 11.097 12.814L8.25 12L11.096 11.187C11.8311 10.9769 12.5006 10.5829 13.0413 10.0423C13.5819 9.50162 13.9759 8.83214 14.186 8.097L14.187 8.096Z" fill="black" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+      <span class="text">see more</span>
+    </button>
+  </div>
         </div>
     </div>
 
@@ -166,21 +176,21 @@
         const sidemenu = document.getElementById("sidemenu");
         const notifyBtn = document.getElementById("notifyBtn");
         const notification = document.getElementById("notification");
-    
+
         // Open menu function (for small screens)
         function openmenu() {
             if (window.innerWidth <= 820) {
                 sidemenu.style.right = "0";
             }
         }
-    
+
         // Close menu function (for small screens)
         function closemenu() {
             if (window.innerWidth <= 820) {
                 sidemenu.style.right = "-200px";
             }
         }
-    
+
         // Ensure the menu behaves correctly on resize
         window.addEventListener("resize", () => {
             if (window.innerWidth > 820) {
@@ -189,23 +199,45 @@
                 sidemenu.style.right = "-200px"; // Hide menu on small screens
             }
         });
-    
+
         // Hide the preloader after the page loads
         window.addEventListener("load", () => {
             document.querySelector(".preloader").style.display = "none";
         });
-    
-        // Notification functionality
+
+        // Notification functionality with error handling
         notifyBtn.addEventListener("click", function (e) {
             e.preventDefault(); // Prevent form submission
-    
-            // Show the notification
-            notification.classList.add("show");
-    
-            // Hide the notification after 2 seconds
-            setTimeout(() => {
-                notification.classList.remove("show");
-            }, 2000);
+
+            try {
+                // Validate form inputs
+                const name = document.querySelector('input[name="name"]').value.trim();
+                const email = document.querySelector('input[name="email"]').value.trim();
+                const message = document.querySelector('textarea[name="message"]').value.trim();
+
+                if (!name || !email || !message) {
+                    throw new Error("All fields are required!");
+                }
+
+                // Show the notification
+                notification.classList.add("show");
+                notification.innerHTML = `<p>Your message has been sent successfully!</p>`;
+
+                // Hide the notification after 2 seconds and redirect to the home page
+                setTimeout(() => {
+                    notification.classList.remove("show");
+                    window.location.href = "#header"; // Redirect to the home page
+                }, 2000);
+            } catch (error) {
+                // Show error notification
+                notification.classList.add("show");
+                notification.innerHTML = `<p style="color: red;">${error.message}</p>`;
+
+                // Hide the error notification after 3 seconds
+                setTimeout(() => {
+                    notification.classList.remove("show");
+                }, 3000);
+            }
         });
     </script>
 </body>

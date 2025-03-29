@@ -392,6 +392,10 @@ form .btn2 {
     opacity: 1;
     visibility: visible;
 }
+.notification p {
+    margin: 0;
+    font-size: 14px;
+}
 
 /* Preloader Styles */
 .loader {
