@@ -1,0 +1,43 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "./server.js", // Point to your main Express server file
+        "use": "@vercel/node" // Use the Node.js builder
+      },
+      {
+        "src": "public/**/*", // If you have static assets in 'public' folder
+        "use": "@vercel/static"
+      },
+      {
+         "src": "css/**/*", // Serve CSS files statically
+         "use": "@vercel/static"
+      },
+      {
+         "src": "js/**/*", // Serve JS files statically
+         "use": "@vercel/static"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)", // Route all /api requests to the Node server
+        "dest": "/server.js"
+      },
+      {
+        "src": "/css/(.*)", // Route requests for CSS files
+        "dest": "/css/$1"
+      },
+       {
+        "src": "/js/(.*)", // Route requests for JS files
+        "dest": "/js/$1"
+      },
+      {
+        "src": "/(.*\\.(ico|png|jpg|jpeg|gif|svg))$", // Route requests for common static files
+        "dest": "/$1"
+      },
+      {
+        "src": "/(.*)", // Fallback: Serve index.html for client-side routing or direct access
+        "dest": "/index.html"
+      }
+    ]
+  }

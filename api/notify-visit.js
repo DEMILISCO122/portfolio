@@ -2,7 +2,7 @@
 // This is a Node.js function for Vercel Serverless Functions
 
 // Import and configure your email service provider (same as in contact.js)
- const sgMail = require('@sendgrid/mail');
+const sgMail = require('@sendgrid/mail');
 const cors = require('cors');
 
 export default async function handler(request, response) {
@@ -42,6 +42,31 @@ export default async function handler(request, response) {
 
 app.use(cors());
 
-app.post('/api/notify-visit', (req, res) => {
-    res.status(200).json({ message: 'Notification received' });
+app.post('/api/notify-visit', async (req, res) => {
+    const timestamp = new Date().toISOString();
+    console.log(`[${timestamp}] POST /api/notify-visit received`);
+
+    // Prepare Notification Email
+    const mailOptions = {
+        from: `"Portfolio Notifier" <${GMAIL_USER}>`,
+        to: VISIT_NOTIFICATION_RECIPIENT, // Send to specified recipient
+        subject: 'Portfolio Visit Notification',
+        text: `Someone visited your portfolio site at ${new Date().toLocaleString('en-NG', { timeZone: LOCATION_TIME_ZONE })}`,
+        html: `<p>Visit detected on your portfolio.</p><p>Time: ${new Date().toLocaleString('en-NG', { timeZone: LOCATION_TIME_ZONE })}</p>`,
+    };
+
+    // Send Notification Email
+    try {
+        transporter.sendMail(mailOptions)
+            .then(info => console.log(`[${timestamp}] Visit notification email sent. ID: ${info.messageId}`))
+            .catch(error => console.error(`[${timestamp}] Failed to send visit notification email:`, error));
+
+        // Respond immediately to frontend
+        return res.status(200).json({ message: 'Notification processed.' });
+
+    } catch (error) {
+        // Catch unexpected errors in the setup/triggering part
+        console.error(`[${timestamp}] Unexpected error in /api/notify-visit:`, error);
+        return res.status(500).json({ error: 'Internal server error processing notification.' });
+    }
 });
