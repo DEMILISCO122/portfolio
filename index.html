@@ -11,16 +11,16 @@
     <meta name="google-site-verification" content="OcRAvpS7PXYIC-EFO10FZP3jbrcYy58zoXX9gsUcAgA" />
     <meta name="og:title" content="Soetan Demilade - Full-Stack Developer Portfolio">
     <meta name="og:description" content="Discover the work of Soetan Demilade, a Full-Stack Developer specializing in scalable web applications.">
-    <meta name="og:image" content="path/to/portfolio-thumbnail.jpg">
+    <meta name="og:image" content="/img/148.png">
     <meta name="og:url" content="https://myportfolio-eosin.vercel.app/">
     <meta name="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Soetan Demilade - Full-Stack Developer Portfolio">
     <meta name="twitter:description" content="Explore the portfolio of Soetan Demilade, a Full-Stack Developer with expertise in React, Node.js, Python, and more.">
-    <meta name="twitter:image" content="path/to/portfolio-thumbnail.jpg">
-    <meta name="twitter:creator" content="@yourTwitterHandle">
+    <meta name="twitter:image" content="/img/148.png">
+    <meta name="twitter:creator" content="@DEMILISCO122">
     <meta name="theme-color" content="#ffffff">
-    <meta name="application-name" content="Soetan Demilade Portfolio">
+    <meta name="application-name" content="Soetan Demilade">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-config" content="path/to/browserconfig.xml">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -34,183 +34,161 @@
     <link rel="stylesheet" href="css/style.css">
 
 </head>
-<body>
-    <header class="site-header">
-        <nav class="navbar">
-            <div class="nav-logo">
-                <a href="#">DEMILISCO</a> </div>
-            <ul class="nav-menu" id="nav-menu-list">
-                 <li class="mobile-menu-header">
-                     <div class="mobile-logo"><a href="#">DEMILISCO</a></div>
-                     <button id="mobile-close-btn" class="hamburger" aria-label="Close menu" aria-expanded="true" aria-controls="nav-menu-list">
-                        <i class="fas fa-times"></i>
-                     </button>
-                 </li>
-                 <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <button id="mobile-open-btn" class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu-list">
-                <i class="fas fa-bars"></i>
-            </button>
-        </nav>
-    </header>
+<body class="loading"> <div id="preloader" class="preloader">
+    <div class="preloader-shape"></div>
+    <div class="preloader-text">Loading Portfolio...</div>
+</div>
+<div id="custom-cursor" class="custom-cursor"></div>
+<div id="custom-cursor-dot" class="custom-cursor-dot"></div>
 
-    <div id="mobile-menu-overlay" class="mobile-menu-overlay"></div>
+<header class="site-header">
+    <nav class="navbar">
+        <div class="nav-logo animate-on-load" data-delay="100">
+            <a href="#" id="logo-link">DEMILISCO</a>
+        </div>
+        <ul class="nav-menu-desktop">
+            <li class="animate-on-load" data-delay="200"><a href="#about" class="nav-link">About</a></li>
+            <li class="animate-on-load" data-delay="250"><a href="#approach" class="nav-link">Approach</a></li>
+            <li class="animate-on-load" data-delay="300"><a href="#tech-stack" class="nav-link">Tech Stack</a></li> <li class="animate-on-load" data-delay="400"><a href="#projects" class="nav-link">Projects</a></li>
+            <li class="animate-on-load" data-delay="500"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <button id="mobile-menu-toggle" class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="fullscreen-nav-menu">
+            <span class="hamburger-line line-1"></span>
+            <span class="hamburger-line line-2"></span>
+            <span class="hamburger-line line-3"></span>
+        </button>
+    </nav>
+</header>
+<div id="fullscreen-nav-menu" class="fullscreen-nav-menu" aria-hidden="true">
+     <button id="mobile-close-btn" class="hamburger active mobile-menu-close" aria-label="Close menu">
+         <span class="hamburger-line line-1"></span>
+         <span class="hamburger-line line-2"></span>
+         <span class="hamburger-line line-3"></span>
+     </button>
+    <ul class="fullscreen-nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#approach" class="nav-link">Approach</a></li>
+        <li><a href="#tech-stack" class="nav-link">Tech Stack</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+</div>
+<main class="main-content">
 
-    <main>
-        <section id="hero" class="hero-section">
-            <div class="hero-content">
-                <h1 class="hero-title animate-on-load">Soetan Demilade</h1>
-                <p class="hero-subtitle animate-on-load">Full-Stack Developer Crafting Digital Experiences</p>
-                <a href="#projects" class="btn animate-on-load">Explore Projects <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </section>
-
-        <section id="about" class="about-section content-section">
-            <h2 class="section-title animate-on-scroll" data-animation="underline">About Me</h2>
-            <div class="about-content text-center">
-                <p class="animate-on-scroll">
-                    Based in **Abeokuta, Nigeria**, I'm a Full-Stack Developer focused on building complete, high-performance web applications. I thrive on architecting solutions that seamlessly integrate frontend user experiences with robust backend logic. My expertise spans JavaScript (React, Node.js), Python (Django/Flask), API design, and database technologies, enabling me to deliver end-to-end value.
-                </p>
-                <div class="about-values animate-on-scroll">
-                    <span class="value-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="value-icon">
-                           <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.59V7.41c0-.89 1.08-1.34 1.71-.71l4.59 4.59c.39.39.39 1.02 0 1.41l-4.59 4.59c-.63.63-1.71.19-1.71-.7z"/>
-                        </svg>
-                         End-to-End Build
-                    </span>
-                    <span class="value-item"><i class="fas fa-drafting-compass value-icon"></i> Precision Code</span>
-                    <span class="value-item"><i class="fas fa-infinity value-icon"></i> Scalable Logic</span>
-                </div>
-            </div>
-        </section>
-
-        <section id="skills" class="skills-section content-section">
-            <h2 class="section-title animate-on-scroll" data-animation="underline">Technical Skills</h2>
-            <div class="skills-grid">
-                 <div class="skill-category animate-on-scroll">
-                    <h3 class="skill-category-title">Frontend</h3>
-                    <ul class="skill-list">
-                        <li><i class="fab fa-react"></i> React</li>
-                        <li><i class="fab fa-vuejs"></i> Vue.js</li>
-                        <li><i class="fab fa-js-square"></i> JavaScript (ESNext)</li>
-                        <li><i class="fas fa-code"></i> HTML5 & Semantics</li>
-                        <li><i class="fab fa-css3-alt"></i> CSS3 / SASS / Tailwind</li>
-                        <li><i class="fas fa-universal-access"></i> Accessibility (A11y)</li>
-                    </ul>
-                </div>
-                <div class="skill-category animate-on-scroll">
-                    <h3 class="skill-category-title">Backend</h3>
-                    <ul class="skill-list">
-                        <li><i class="fab fa-node-js"></i> Node.js</li>
-                        <li><i class="fas fa-server"></i> Express.js / NestJS</li>
-                        <li><i class="fab fa-python"></i> Python</li>
-                        <li><i class="fas fa-feather-alt"></i> Django / Flask</li>
-                        <li><i class="fas fa-route"></i> REST & GraphQL APIs</li> 
-                        <li><i class="fas fa-user-lock"></i> Authentication / Security</li> 
-                    </ul>
-                </div>
-                 <div class="skill-category animate-on-scroll">
-                    <h3 class="skill-category-title">Databases</h3>
-                    <ul class="skill-list">
-                        <li><i class="fas fa-database"></i> PostgreSQL</li>
-                        <li><i class="fas fa-database"></i> MySQL</li>
-                        <li><i class="fas fa-leaf"></i> MongoDB</li>
-                        <li><i class="fas fa-cogs"></i> ORMs / ODMs</li>
-                        <li><i class="fas fa-database"></i> Redis</li>
-                        <li><i class="fas fa-search-location"></i> Elasticsearch</li>
-                    </ul>
-                </div>
-                 <div class="skill-category animate-on-scroll">
-                    <h3 class="skill-category-title">DevOps & Tools</h3>
-                    <ul class="skill-list">
-                        <li><i class="fab fa-git-alt"></i> Git & GitHub</li>
-                        <li><i class="fab fa-docker"></i> Docker</li>
-                        <li><i class="fas fa-cloud-upload-alt"></i> Cloud Platforms</li>
-                        <li><i class="fas fa-shipping-fast"></i> CI/CD Pipelines</li>
-                        <li><i class="fas fa-vial"></i> Automated Testing</li>
-                        <li><i class="fas fa-network-wired"></i> Nginx / Linux</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- <section id="projects" class="projects-section content-section">
-            <h2 class="section-title animate-on-scroll" data-animation="underline">Featured Projects</h2>
-            <div class="projects-grid">
-                 <article class="project-card animate-on-scroll">
-                     <div class="project-icon"><i class="fas fa-store"></i></div> <h3 class="project-title">E-commerce Platform</h3>
-                    <p class="project-description">Concise overview here. Details in modal.</p>
-                    <div class="project-tech">
-                        <i class="fab fa-react" title="React"></i> <i class="fab fa-node-js" title="Node.js"></i> <i class="fas fa-database" title="PostgreSQL"></i>
-                    </div>
-                    <div class="project-links">
-                        <button class="btn-details project-modal-trigger" data-title="E-commerce Platform - Detailed" data-description="!!! Detailed description of role, features, challenges, architecture !!!" data-tech="React, Node.js, Express, PostgreSQL, ..." data-github="https://..." data-live="https://...">View Details</button>
-                    </div>
-                </article>
-                <article class="project-card animate-on-scroll">
-                     <div class="project-icon"><i class="fas fa-chart-line"></i></div> <h3 class="project-title">Data Analysis Dashboard</h3>
-                    <p class="project-description">Brief overview. Details in modal.</p>
-                    <div class="project-tech">
-                         <i class="fab fa-python" title="Python/Flask"></i> <i class="fas fa-database" title="MySQL"></i> <i class="fab fa-js-square" title="D3.js/Chart.js"></i>
-                    </div>
-                    <div class="project-links">
-                         <button class="btn-details project-modal-trigger" data-title="Data Analysis Dashboard - Detailed" data-description="!!! Detailed description focusing on backend data processing, API for charts, frontend visualization challenges, etc. !!!" data-tech="Python, Flask, MySQL, D3.js, Docker" data-github="https://..." data-live="">View Details</button>
-                    </div>
-                </article>
-                </div>
-        </section> -->
-
-        <section id="contact" class="contact-section content-section">
-            <h2 class="section-title animate-on-scroll" data-animation="underline">Get In Touch</h2>
-            <p class="animate-on-scroll text-center">Interested in collaborating or have a question? Let's connect!</p>
-            <form id="contact-form" class="contact-form animate-on-scroll">
-                 <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required aria-required="true" placeholder="Your Name">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required aria-required="true" placeholder="your.email@example.com">
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required aria-required="true" placeholder="Your message here..."></textarea>
-                </div>
-                <div id="form-status" role="status" aria-live="polite"></div>
-                <button type="submit" class="btn">Send Message <i class="fas fa-paper-plane"></i></button>
-            </form>
-            <div class="social-links animate-on-scroll">
-                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="social-icon-link"><i class="fab fa-linkedin"></i></a>
-                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="social-icon-link"><i class="fab fa-github-square"></i></a>
-                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter Profile" class="social-icon-link"><i class="fab fa-twitter-square"></i></a>
-            </div>
-             <p class="location animate-on-scroll"><i class="fas fa-map-marker-alt"></i> Abeokuta, Nigeria</p>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <div class="footer-content">
-            <p>&copy; <span id="current-year"></span> Soetan Demilade. All Rights Reserved.</p>
-            <p class="location-time"><span id="location-time">Loading time...</span></p> </div>
-        <a href="#hero" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
-    </footer>
-
-    <div id="project-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-        <div class="modal-content">
-            <button id="modal-close" class="modal-close-btn" aria-label="Close modal">&times;</button>
-            <h3 id="modal-title" class="modal-project-title"></h3>
-            <p id="modal-description" class="modal-project-description"></p>
-            <h4>Technologies Used:</h4>
-            <p id="modal-tech" class="modal-project-tech"></p>
-            <div class="modal-links">
-                <a id="modal-github-link" href="#" target="_blank" rel="noopener noreferrer" class="project-link modal-link-button"><i class="fab fa-github"></i> GitHub</a>
-                <a id="modal-live-link" href="#" target="_blank" rel="noopener noreferrer" class="project-link modal-link-button"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title animate-on-load gradient-text">Soetan Demilade</h1>
+            <p class="hero-subtitle animate-on-load">
+                <span id="animated-subtitle">Full-Stack Developer</span>
+                <span class="typing-cursor" aria-hidden="true"></span>
+            </p>
+            <a href="#projects" class="btn animate-on-load">Explore Projects <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+    <section id="about" class="about-section content-section">
+        <h2 class="section-title animate-on-scroll" data-animation="underline">About Me</h2>
+        <div class="about-content text-center">
+            <p class="animate-on-scroll">
+                Based in **Abeokuta, Nigeria**, I'm a Full-Stack Developer passionate about building performant, scalable, and user-centric web applications... (rest of bio)
+            </p>
+            <div class="about-values animate-on-scroll">
+                <span><i class="fas fa-infinity value-icon"></i> Scalable Architecture</span>
+                <span><i class="fas fa-terminal value-icon"></i> Clean Code</span>
+                <span><i class="fas fa-lightbulb value-icon"></i> Innovative Solutions</span>
             </div>
         </div>
+    </section>
+    <section id="approach" class="approach-section content-section">
+        <h2 class="section-title animate-on-scroll" data-animation="underline">My Approach</h2>
+        <div class="approach-grid">
+            <div class="approach-item animate-on-scroll">
+                <div class="approach-icon"><i class="fas fa-users"></i></div>
+                <h3 class="approach-title">User-Centric Focus</h3>
+                <p>I prioritize understanding user needs to build intuitive and engaging experiences.</p>
+            </div>
+            <div class="approach-item animate-on-scroll">
+                <div class="approach-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3 class="approach-title">Robust & Secure</h3>
+                <p>Writing clean, maintainable, and secure code is fundamental for reliable applications.</p>
+            </div>
+            <div class="approach-item animate-on-scroll">
+                <div class="approach-icon"><i class="fas fa-rocket"></i></div>
+                <h3 class="approach-title">Performance Matters</h3>
+                <p>Optimizing for speed across the stack ensures a smooth user experience.</p>
+            </div>
+        </div>
+    </section>
+    <section id="tech-stack" class="tech-stack-section content-section">
+         <h2 class="section-title animate-on-scroll" data-animation="underline">My Tech Stack</h2>
+         <p class="text-center animate-on-scroll section-subtitle">
+             Click a category to explore the technologies I frequently use.
+         </p>
+         <div class="tech-stack-container animate-on-scroll">
+             <div class="tech-categories">
+                 <button class="tech-category-btn active" data-target="#frontend-details" aria-selected="true"><i class="fas fa-desktop"></i> Frontend</button>
+                 <button class="tech-category-btn" data-target="#backend-details" aria-selected="false"><i class="fas fa-server"></i> Backend</button>
+                 <button class="tech-category-btn" data-target="#database-details" aria-selected="false"><i class="fas fa-database"></i> Databases</button>
+                 <button class="tech-category-btn" data-target="#tools-details" aria-selected="false"><i class="fas fa-tools"></i> Tools & DevOps</button>
+             </div>
+             <div class="tech-details-container">
+                 <div id="frontend-details" class="tech-details active">
+                     <ul class="tech-list"> <li><i class="fab fa-react"></i> React & Next.js</li><li><i class="fab fa-vuejs"></i> Vue.js</li><li><i class="fab fa-js-square"></i> JavaScript (ESNext)</li><li><i class="fas fa-code"></i> HTML5 & Semantics</li><li><i class="fab fa-css3-alt"></i> CSS3 / SASS / Tailwind</li><li><i class="fas fa-universal-access"></i> Web Accessibility (A11y)</li> </ul>
+                 </div>
+                 <div id="backend-details" class="tech-details">
+                     <ul class="tech-list"> <li><i class="fab fa-node-js"></i> Node.js</li><li><i class="fas fa-server"></i> Express.js / NestJS</li><li><i class="fab fa-python"></i> Python</li><li><i class="fas fa-feather-alt"></i> Django / Flask</li><li><i class="fas fa-route"></i> REST & GraphQL APIs</li><li><i class="fas fa-user-shield"></i> Authentication / Security</li> </ul>
+                 </div>
+                 <div id="database-details" class="tech-details">
+                     <ul class="tech-list"> <li><i class="fas fa-database"></i> PostgreSQL</li><li><i class="fas fa-database"></i> MySQL</li><li><i class="fas fa-leaf"></i> MongoDB</li><li><i class="fas fa-cogs"></i> ORMs / ODMs</li><li><i class="fas fa-fire"></i> Firebase / Supabase</li><li><i class="fas fa-table"></i> Database Design & Indexing</li> </ul>
+                 </div>
+                 <div id="tools-details" class="tech-details">
+                     <ul class="tech-list"> <li><i class="fab fa-git-alt"></i> Git & GitHub Actions</li><li><i class="fab fa-docker"></i> Docker & Containerization</li><li><i class="fas fa-cloud"></i> Cloud Platforms (Vercel/AWS)</li><li><i class="fas fa-shipping-fast"></i> CI/CD Implementation</li><li><i class="fas fa-vial"></i> Automated Testing</li><li><i class="fas fa-network-wired"></i> Nginx / Linux Basics</li> </ul>
+                 </div>
+             </div>
+         </div>
+    </section>
+    <section id="projects" class="projects-section content-section">
+        <h2 class="section-title animate-on-scroll" data-animation="underline">Featured Projects</h2>
+        <div class="placeholder-content text-center animate-on-scroll">
+            <div class="placeholder-icon"><i class="fas fa-hourglass-start"></i></div>
+            <p>Exciting new projects are currently under development.</p>
+            <p>Detailed case studies will be available here soon!</p>
+             <p class="github-link" style="margin-top: var(--spacing-lg);">
+                 <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" rel="noopener noreferrer" class="link-subtle">
+                     Meanwhile, view my code on GitHub <i class="fas fa-external-link-alt"></i>
+                 </a>
+             </p>
+        </div>
+        </section>
+    <section id="contact" class="contact-section content-section">
+        <h2 class="section-title animate-on-scroll" data-animation="underline">Contact Me</h2>
+        <p class="animate-on-scroll text-center section-subtitle">Interested in collaborating or have a question? Let's talk!</p>
+        <form id="contact-form" class="contact-form animate-on-scroll">
+             <div class="form-group"> <label for="name">Name</label> <input type="text" id="name" name="name" required aria-required="true" placeholder="Your Name" autocomplete="name"> </div>
+             <div class="form-group"> <label for="email">Email</label> <input type="email" id="email" name="email" required aria-required="true" placeholder="your.email@example.com" autocomplete="email"> </div>
+             <div class="form-group"> <label for="message">Message</label> <textarea id="message" name="message" rows="5" required aria-required="true" placeholder="Tell me about your project or inquiry..."></textarea> </div>
+             <button type="submit" class="btn">Send Message <i class="fas fa-paper-plane"></i></button>
+        </form>
+        <div id="form-status" class="form-status" role="status" aria-live="assertive" aria-atomic="true"></div>
+        <div class="social-links animate-on-scroll">
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="social-icon-link"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/DEMILISCO122" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="social-icon-link"><i class="fab fa-github-square"></i></a>
+            <a href="https://x.com/DEMILISCO?t=7ziVegnFUESsK5_qxgsk6Q&s=08" target="_blank" rel="noopener noreferrer" aria-label="Twitter Profile" class="social-icon-link"><i class="fab fa-twitter-square"></i></a>
+            <a href="https://wa.me/2348038190053" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="social-icon-link"><i class="fab fa-whatsapp"></i></a>
+        </div>
+         <p class="location animate-on-scroll"><i class="fas fa-map-marker-alt"></i> Abeokuta, Nigeria</p>
+    </section>
+    </main>
+<footer class="site-footer">
+    <div class="footer-content">
+        <p>&copy; <span id="current-year"></span> Soetan Demilade. All Rights Reserved.</p>
+        <p class="location-time"><span id="location-time">Loading time...</span></p>
     </div>
-    <script src="js/main.js" defer></script>
+    <a href="#hero" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+</footer>
+<div id="project-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+     <div class="modal-content"> <button id="modal-close" class="modal-close-btn" aria-label="Close modal">&times;</button> <h3 id="modal-title" class="modal-project-title"></h3> <p id="modal-description" class="modal-project-description"></p> <h4>Technologies Used:</h4> <p id="modal-tech" class="modal-project-tech"></p> <div class="modal-links"> <a id="modal-github-link" href="#" target="_blank" rel="noopener noreferrer" class="project-link modal-link-button"><i class="fab fa-github"></i> GitHub</a> <a id="modal-live-link" href="#" target="_blank" rel="noopener noreferrer" class="project-link modal-link-button"><i class="fas fa-external-link-alt"></i> Live Demo</a> </div> </div>
+</div>
+<script src="js/main.js" defer></script>
 
 </body>
+</html>
